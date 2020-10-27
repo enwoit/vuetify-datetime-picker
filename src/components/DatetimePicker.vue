@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="display" :width="dialogWidth">
+  <v-dialog v-bind="dialogProps" v-model="display" :width="dialogWidth">
     <template v-slot:activator="{ on }">
       <v-text-field
         v-bind="textFieldProps"
@@ -115,6 +115,9 @@ export default {
       type: Object
     },
     timePickerProps: {
+      type: Object
+    },
+    dialogProps: {
       type: Object
     }
   },
